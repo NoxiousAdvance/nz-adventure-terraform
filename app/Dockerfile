@@ -6,8 +6,9 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY src/ .
+# Copy application code and data
+COPY src/app.py .
+COPY src/game_data.json .
 
 # Set environment variables
 ENV PORT=8080

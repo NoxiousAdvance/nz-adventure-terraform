@@ -2,12 +2,24 @@ from flask import Flask, request, jsonify
 from google.cloud import firestore
 import os
 import json
+import pathlib
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
-db = firestore.Client()
 
-# Load game data
-with open('game_data.json', 'r') as f:
+def get_firestore_client():
+    if os.getenv('FIRESTORE_EMULATOR_HOST'):
+        return firestore.Client(project='test-project')
+    return firestore.Client()
+
+db = get_firestore_client()
+
+# Load game data from the same directory as this file
+current_dir = pathlib.Path(__file__).parent.resolve()
+with open(current_dir / 'game_data.json', 'r') as f:
     GAME_DATA = json.load(f)
 
 @app.route('/')
