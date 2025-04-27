@@ -15,15 +15,21 @@
    - ✅ Firestore (firestore.googleapis.com)
    - ✅ Cloud Run (run.googleapis.com)
 
+4. Terraform Configuration
+   - ✅ Created terraform.tfvars with project settings
+   - ✅ Initialized Terraform
+   - ✅ Provider plugins installed
+
 ## Next Steps
-1. Create terraform.tfvars file with project configuration
-2. Initialize Terraform
-3. Create and test infrastructure with Terraform
-4. Deploy initial application code
+1. Run terraform plan to verify configuration
+2. Apply infrastructure with Terraform
+3. Deploy initial application code
 
 ## Infrastructure Details
 The infrastructure is defined in the following files:
 - main.tf: Main infrastructure configuration
 - variables.tf: Variable definitions
 - outputs.tf: Output configurations
-- .gitignore: Git ignore rules 
+- .gitignore: Git ignore rules
+- terraform.tfvars: Project-specific variables (not in Git)
+- .terraform.lock.hcl: Provider version locks 
