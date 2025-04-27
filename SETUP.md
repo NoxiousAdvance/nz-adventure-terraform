@@ -19,11 +19,13 @@
    - ✅ Created terraform.tfvars with project settings
    - ✅ Initialized Terraform
    - ✅ Provider plugins installed
+   - ✅ Terraform plan successful (6 resources to create)
 
 ## Next Steps
-1. Run terraform plan to verify configuration
-2. Apply infrastructure with Terraform
-3. Deploy initial application code
+1. Create container image for the game application
+2. Push container image to Google Container Registry
+3. Apply infrastructure with Terraform
+4. Deploy initial application code
 
 ## Infrastructure Details
 The infrastructure is defined in the following files:
@@ -32,4 +34,20 @@ The infrastructure is defined in the following files:
 - outputs.tf: Output configurations
 - .gitignore: Git ignore rules
 - terraform.tfvars: Project-specific variables (not in Git)
-- .terraform.lock.hcl: Provider version locks 
+- .terraform.lock.hcl: Provider version locks
+
+## Planned Resources
+1. Cloud Run Service (nz-adventure-game)
+   - Memory: 512Mi
+   - CPU: 1000m
+2. VPC Network (nz-adventure-vpc)
+3. Subnet (nz-adventure-subnet)
+   - CIDR: 10.0.0.0/24
+4. Firestore Database
+   - Mode: Native
+   - Location: asia-southeast1
+5. Cloud Storage Bucket
+   - Name: nz-adventure-game-2024-game-assets
+   - Class: STANDARD
+6. IAM Configuration
+   - Public access to Cloud Run service 
