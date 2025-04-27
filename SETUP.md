@@ -21,8 +21,14 @@
    - ✅ Provider plugins installed
    - ✅ Terraform plan successful (6 resources to create)
 
+5. Application Code
+   - ✅ Created Flask application
+   - ✅ Added game logic and data
+   - ✅ Created Dockerfile
+   - ✅ Added requirements.txt
+
 ## Next Steps
-1. Create container image for the game application
+1. Build and test the container locally
 2. Push container image to Google Container Registry
 3. Apply infrastructure with Terraform
 4. Deploy initial application code
@@ -35,6 +41,15 @@ The infrastructure is defined in the following files:
 - .gitignore: Git ignore rules
 - terraform.tfvars: Project-specific variables (not in Git)
 - .terraform.lock.hcl: Provider version locks
+
+## Application Structure
+- app/
+  - src/
+    - app.py: Main Flask application
+    - game_data.json: Game world definition
+  - tests/: Test files (to be added)
+  - Dockerfile: Container configuration
+  - requirements.txt: Python dependencies
 
 ## Planned Resources
 1. Cloud Run Service (nz-adventure-game)

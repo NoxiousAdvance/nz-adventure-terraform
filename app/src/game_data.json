@@ -1,0 +1,76 @@
+{
+    "locations": {
+        "start": {
+            "name": "Auckland Harbour",
+            "description": "You stand at the bustling Auckland Harbour. The iconic Sky Tower pierces the sky to the south. The sparkling waters of the Hauraki Gulf stretch out before you, with Rangitoto Island visible in the distance. A ferry terminal is nearby.",
+            "exits": {
+                "south": "sky_tower",
+                "east": "ferry_terminal",
+                "west": "viaduct"
+            },
+            "items": ["map", "sunglasses"]
+        },
+        "sky_tower": {
+            "name": "Sky Tower Base",
+            "description": "You're at the base of the massive Sky Tower. Tourists buzz around the entrance, some preparing for the SkyJump. The harbour lies to the north, and you can see Queen Street to the east.",
+            "exits": {
+                "north": "start",
+                "east": "queen_street",
+                "up": "sky_deck"
+            },
+            "items": ["camera"]
+        },
+        "sky_deck": {
+            "name": "Sky Tower Observation Deck",
+            "description": "The view is breathtaking! You can see for miles in every direction. The harbour sparkles to the north, and the entire city spreads out below you. The glass floor panels make your heart race.",
+            "exits": {
+                "down": "sky_tower"
+            },
+            "items": ["telescope"]
+        },
+        "ferry_terminal": {
+            "name": "Ferry Terminal",
+            "description": "The historic ferry terminal building is a hub of activity. Ferries come and go, heading to various destinations in the harbour. A schedule shows the next ferry to Rangitoto Island.",
+            "exits": {
+                "west": "start",
+                "ferry": "rangitoto"
+            },
+            "items": ["ferry_ticket"]
+        },
+        "rangitoto": {
+            "name": "Rangitoto Island",
+            "description": "You're on the volcanic island of Rangitoto. The black volcanic rock and pohutukawa forest surround you. A trail leads up to the summit, promising spectacular views.",
+            "exits": {
+                "ferry": "ferry_terminal",
+                "up": "rangitoto_summit"
+            },
+            "items": ["volcanic_rock", "pohutukawa_flower"]
+        },
+        "rangitoto_summit": {
+            "name": "Rangitoto Summit",
+            "description": "The summit offers a stunning 360-degree view of the Hauraki Gulf and Auckland. The volcanic crater beside you is a stark reminder of the island's fiery origins.",
+            "exits": {
+                "down": "rangitoto"
+            },
+            "items": ["binoculars"]
+        },
+        "viaduct": {
+            "name": "Viaduct Basin",
+            "description": "The trendy Viaduct Basin is lined with restaurants and bars. Luxury yachts bob in the marina. You can smell the ocean and hear the clinking of halyards against masts.",
+            "exits": {
+                "east": "start",
+                "south": "wynyard_quarter"
+            },
+            "items": ["yacht_brochure"]
+        },
+        "queen_street": {
+            "name": "Queen Street",
+            "description": "You're on Auckland's main street. Shops and cafes line both sides, and people hurry in all directions. Street performers entertain the crowds.",
+            "exits": {
+                "west": "sky_tower",
+                "north": "britomart"
+            },
+            "items": ["coffee_cup", "shopping_bag"]
+        }
+    }
+} 
